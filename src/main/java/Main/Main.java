@@ -6,7 +6,7 @@ import entities.PC;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.util.Iterator;
+import java.math.BigDecimal;
 import java.util.List;
 
 public class Main {
@@ -19,5 +19,16 @@ public class Main {
         for (PC pc : list) {
             System.out.println(pc);
         }
+        PC pc=new PC();
+        pc.setCode(13);
+        pc.setModel("1232");
+        pc.setSpeed((short) 1000);
+        pc.setRam((short) 256);
+        pc.setHd(100f);
+        pc.setCd("52x");
+        pc.setPrice(new BigDecimal(1234));
+        daoClass.insert(pc);
+
+        System.out.println("выход из программы");
     }
 }
