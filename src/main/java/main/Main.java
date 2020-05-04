@@ -1,12 +1,11 @@
-package Main;
+package main;
 
-import DaoClass.DaoClass;
+import daoClass.DaoClass;
 import configuration.Config;
 import entities.PC;
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 public class Main {

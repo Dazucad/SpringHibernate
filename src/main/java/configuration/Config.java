@@ -1,6 +1,6 @@
 package configuration;
 
-import DaoClass.DaoClass;
+import daoClass.DaoClass;
 import entities.Laptop;
 import entities.PC;
 import entities.Printer;
@@ -9,7 +9,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate5.HibernateTransactionManager;
 
 import javax.sql.DataSource;
 

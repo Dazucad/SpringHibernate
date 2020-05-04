@@ -1,4 +1,4 @@
-package DaoClass;
+package daoClass;
 
 import entities.PC;
 import org.hibernate.Session;
