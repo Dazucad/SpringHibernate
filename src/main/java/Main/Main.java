@@ -19,7 +19,7 @@ public class Main {
         for (PC pc : list) {
             System.out.println(pc);
         }
-        PC pc=new PC();
+        /*PC pc=new PC();
         pc.setCode(13);
         pc.setModel("1232");
         pc.setSpeed((short) 1000);
@@ -27,7 +27,9 @@ public class Main {
         pc.setHd(100f);
         pc.setCd("52x");
         pc.setPrice(new BigDecimal(1234));
-        daoClass.insert(pc);
+        daoClass.insert(pc);*/
+
+        System.out.println(daoClass.findPCbyId(1));
 
         System.out.println("выход из программы");
     }

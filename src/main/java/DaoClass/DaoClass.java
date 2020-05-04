@@ -35,4 +35,9 @@ public class DaoClass {
     public List<PC> findAllPC() {
         return sessionFactory.openSession().createQuery("from PC").list();
     }
+
+    public PC findPCbyId(Integer id){
+        Session session=sessionFactory.openSession();
+        return session.byId(PC.class).load(id);
+    }
 }
