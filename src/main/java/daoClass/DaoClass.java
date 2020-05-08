@@ -4,10 +4,11 @@ import entities.PC;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.PersistenceException;
+
 import java.util.List;
 
 @Repository
@@ -31,7 +32,7 @@ public class DaoClass {
         }
     }
 
-    @Transactional
+
     public List<PC> findAllPC() {
         return sessionFactory.openSession().createQuery("from PC").list();
     }
@@ -39,5 +40,12 @@ public class DaoClass {
     public PC findPCbyId(Integer id){
         Session session=sessionFactory.openSession();
         return session.byId(PC.class).load(id);
+    }
+
+    public List<PC> findPcByModel(String model){
+        Session session=sessionFactory.openSession();
+        Query<PC> query=session.createQuery("from PC pc where pc.model=:model",PC.class);
+        query.setParameter("model",model);
+        return query.getResultList();
     }
 }

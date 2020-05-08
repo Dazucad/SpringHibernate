@@ -29,6 +29,10 @@ public class Main {
         daoClass.insert(pc);*/
 
         System.out.println(daoClass.findPCbyId(1));
+        list=daoClass.findPcByModel("1232");
+        for (PC pc : list) {
+            System.out.println(pc);
+        }
 
         System.out.println("выход из программы");
     }
